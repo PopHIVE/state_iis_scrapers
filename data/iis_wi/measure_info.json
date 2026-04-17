@@ -1,0 +1,36 @@
+{
+  "iis_{variant}": {
+    "id": "iis_{variant}",
+    "short_name": "WI Adult: {variant.short_name}",
+    "long_name": "Wisconsin Adult {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of adults with {variant.long_name} vaccination in Wisconsin, by county.",
+    "long_description": "Adult immunization coverage rate for {variant.long_name} from the Wisconsin Immunization Registry (WIR). Data are reported annually at the county level.",
+    "statement": "In {location}, {value}% of adults received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "wi_wir" }],
+    "variants": {
+      "hepa_complete": { "short_name": "Hep A (complete)", "long_name": "Hepatitis A complete series" },
+      "hepb_1": { "short_name": "Hep B (1+ dose)", "long_name": "Hepatitis B 1+ dose" },
+      "hepb_complete": { "short_name": "Hep B (complete)", "long_name": "Hepatitis B complete series" },
+      "hpv_complete": { "short_name": "HPV (complete)", "long_name": "HPV complete series" },
+      "pneumo_complete": { "short_name": "Pneumococcal (complete)", "long_name": "Pneumococcal complete series" },
+      "td_or_tdap": { "short_name": "Td or Tdap", "long_name": "Td or Tdap" },
+      "tdap": { "short_name": "Tdap", "long_name": "Tdap" },
+      "zoster_shingles_complete": { "short_name": "Zoster/Shingles (complete)", "long_name": "Zoster (Shingles) complete series" }
+    }
+  },
+  "_sources": {
+    "wi_wir": {
+      "name": "Wisconsin Immunization Registry (WIR)",
+      "url": "https://www.dhs.wisconsin.gov/immunization/adult-vaccine-data.htm",
+      "organization": "Wisconsin Department of Health Services",
+      "organization_url": "https://www.dhs.wisconsin.gov/",
+      "description": "Adult vaccination coverage data from the Wisconsin Immunization Registry (WIR). Includes coverage rates for multiple vaccine types among adults, reported annually at the county level. The WIR is a statewide electronic system that records immunizations given to people of all ages.",
+      "restrictions": "Public domain. Wisconsin Department of Health Services data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

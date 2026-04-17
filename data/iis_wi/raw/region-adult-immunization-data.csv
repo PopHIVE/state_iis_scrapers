@@ -1,0 +1,211 @@
+﻿Row,REGION,Year,Age,Vaccine,Percent
+1,Northeastern,2014,19–26 years old,HPV Complete,19.4%
+2,Northeastern,2015,19–26 years old,HPV Complete,21.8%
+3,Northeastern,2016,19–26 years old,HPV Complete,25.2%
+4,Northeastern,2017,19–26 years old,HPV Complete,29.5%
+5,Northeastern,2018,19–26 years old,HPV Complete,33.3%
+6,Northeastern,2018,50 years and older,Zoster (Shingles) Complete,2.4%
+7,Northeastern,2019,19–26 years old,HPV Complete,37.3%
+8,Northeastern,2019,19–49 years old,HepA Complete,12.4%
+9,Northeastern,2019,50 years and older,Zoster (Shingles) Complete,8.6%
+10,Northeastern,2020,19–26 years old,HPV Complete,39.7%
+11,Northeastern,2020,19–49 years old,HepA Complete,14.2%
+12,Northeastern,2020,50 years and older,Zoster (Shingles) Complete,17.1%
+13,Northeastern,2021,19–26 years old,HPV Complete,42.5%
+14,Northeastern,2021,19–49 years old,HepA Complete,15.9%
+15,Northeastern,2021,50 years and older,Zoster (Shingles) Complete,23.5%
+16,Northeastern,2022,19–26 years old,HPV Complete,45.6%
+17,Northeastern,2022,19–49 years old,HepA Complete,16.4%
+18,Northeastern,2022,19–59 years old,HepB (1),49.4%
+19,Northeastern,2022,19–59 years old,HepB Complete,44.1%
+20,Northeastern,2022,50 years and older,Zoster (Shingles) Complete,28.1%
+21,Northeastern,2023,19–26 years old,HPV Complete,52.6%
+22,Northeastern,2023,19–49 years old,HepA Complete,20.5%
+23,Northeastern,2023,19–59 years old,HepB (1),53.1%
+24,Northeastern,2023,19–59 years old,HepB Complete,47.9%
+25,Northeastern,2023,19–64 years old,Td or Tdap,64.8%
+26,Northeastern,2023,19–64 years old,Tdap,56.5%
+27,Northeastern,2023,50 years and older,Zoster (Shingles) Complete,34.1%
+28,Northeastern,2024,19–26 years old,HPV Complete,55.3%
+29,Northeastern,2024,19–49 years old,HepA Complete,22.8%
+30,Northeastern,2024,19–59 years old,HepB (1),56.1%
+31,Northeastern,2024,19–59 years old,HepB Complete,50.4%
+32,Northeastern,2024,19–64 years old,Td or Tdap,65.2%
+33,Northeastern,2024,19–64 years old,Tdap,56.3%
+34,Northeastern,2024,50 years and older,Zoster (Shingles) Complete,37.6%
+35,Northeastern,2025,19–26 years old,HPV Complete,57.8%
+36,Northeastern,2025,19–49 years old,HepA Complete,25.5%
+37,Northeastern,2025,19–59 years old,HepB (1),59.3%
+38,Northeastern,2025,19–59 years old,HepB Complete,53.5%
+39,Northeastern,2025,19–64 years old,Td or Tdap,65.3%
+40,Northeastern,2025,19–64 years old,Tdap,56.3%
+41,Northeastern,2025,50 years and older,Pneumo Complete,49.5%
+42,Northeastern,2025,50 years and older,Zoster (Shingles) Complete,40.5%
+43,Northern,2014,19–26 years old,HPV Complete,20.8%
+44,Northern,2015,19–26 years old,HPV Complete,22.8%
+45,Northern,2016,19–26 years old,HPV Complete,25.8%
+46,Northern,2017,19–26 years old,HPV Complete,29.7%
+47,Northern,2018,19–26 years old,HPV Complete,33.0%
+48,Northern,2018,50 years and older,Zoster (Shingles) Complete,1.7%
+49,Northern,2019,19–26 years old,HPV Complete,36.6%
+50,Northern,2019,19–49 years old,HepA Complete,10.0%
+51,Northern,2019,50 years and older,Zoster (Shingles) Complete,6.3%
+52,Northern,2020,19–26 years old,HPV Complete,38.8%
+53,Northern,2020,19–49 years old,HepA Complete,11.1%
+54,Northern,2020,50 years and older,Zoster (Shingles) Complete,13.3%
+55,Northern,2021,19–26 years old,HPV Complete,42.0%
+56,Northern,2021,19–49 years old,HepA Complete,12.4%
+57,Northern,2021,50 years and older,Zoster (Shingles) Complete,19.4%
+58,Northern,2022,19–26 years old,HPV Complete,45.1%
+59,Northern,2022,19–49 years old,HepA Complete,12.7%
+60,Northern,2022,19–59 years old,HepB (1),50.8%
+61,Northern,2022,19–59 years old,HepB Complete,46.0%
+62,Northern,2022,50 years and older,Zoster (Shingles) Complete,24.1%
+63,Northern,2023,19–26 years old,HPV Complete,51.7%
+64,Northern,2023,19–49 years old,HepA Complete,16.6%
+65,Northern,2023,19–59 years old,HepB (1),55.0%
+66,Northern,2023,19–59 years old,HepB Complete,50.2%
+67,Northern,2023,19–64 years old,Td or Tdap,62.7%
+68,Northern,2023,19–64 years old,Tdap,52.3%
+69,Northern,2023,50 years and older,Zoster (Shingles) Complete,30.0%
+70,Northern,2024,19–26 years old,HPV Complete,54.1%
+71,Northern,2024,19–49 years old,HepA Complete,19.0%
+72,Northern,2024,19–59 years old,HepB (1),57.2%
+73,Northern,2024,19–59 years old,HepB Complete,52.3%
+74,Northern,2024,19–64 years old,Td or Tdap,63.3%
+75,Northern,2024,19–64 years old,Tdap,52.7%
+76,Northern,2024,50 years and older,Zoster (Shingles) Complete,34.5%
+77,Northern,2025,19–26 years old,HPV Complete,56.3%
+78,Northern,2025,19–49 years old,HepA Complete,21.5%
+79,Northern,2025,19–59 years old,HepB (1),59.3%
+80,Northern,2025,19–59 years old,HepB Complete,54.4%
+81,Northern,2025,19–64 years old,Td or Tdap,63.5%
+82,Northern,2025,19–64 years old,Tdap,53.0%
+83,Northern,2025,50 years and older,Pneumo Complete,47.8%
+84,Northern,2025,50 years and older,Zoster (Shingles) Complete,37.2%
+85,Southeastern,2014,19–26 years old,HPV Complete,17.9%
+86,Southeastern,2015,19–26 years old,HPV Complete,19.5%
+87,Southeastern,2016,19–26 years old,HPV Complete,22.6%
+88,Southeastern,2017,19–26 years old,HPV Complete,27.3%
+89,Southeastern,2018,19–26 years old,HPV Complete,30.9%
+90,Southeastern,2018,50 years and older,Zoster (Shingles) Complete,1.6%
+91,Southeastern,2019,19–26 years old,HPV Complete,34.8%
+92,Southeastern,2019,19–49 years old,HepA Complete,17.0%
+93,Southeastern,2019,50 years and older,Zoster (Shingles) Complete,6.7%
+94,Southeastern,2020,19–26 years old,HPV Complete,37.1%
+95,Southeastern,2020,19–49 years old,HepA Complete,18.4%
+96,Southeastern,2020,50 years and older,Zoster (Shingles) Complete,12.6%
+97,Southeastern,2021,19–26 years old,HPV Complete,40.1%
+98,Southeastern,2021,19–49 years old,HepA Complete,20.0%
+99,Southeastern,2021,50 years and older,Zoster (Shingles) Complete,18.1%
+100,Southeastern,2022,19–26 years old,HPV Complete,43.2%
+101,Southeastern,2022,19–49 years old,HepA Complete,20.3%
+102,Southeastern,2022,19–59 years old,HepB (1),44.7%
+103,Southeastern,2022,19–59 years old,HepB Complete,36.4%
+104,Southeastern,2022,50 years and older,Zoster (Shingles) Complete,22.6%
+105,Southeastern,2023,19–26 years old,HPV Complete,51.7%
+106,Southeastern,2023,19–49 years old,HepA Complete,25.1%
+107,Southeastern,2023,19–59 years old,HepB (1),49.1%
+108,Southeastern,2023,19–59 years old,HepB Complete,41.2%
+109,Southeastern,2023,19–64 years old,Td or Tdap,57.1%
+110,Southeastern,2023,19–64 years old,Tdap,53.0%
+111,Southeastern,2023,50 years and older,Zoster (Shingles) Complete,29.6%
+112,Southeastern,2024,19–26 years old,HPV Complete,54.5%
+113,Southeastern,2024,19–49 years old,HepA Complete,27.3%
+114,Southeastern,2024,19–59 years old,HepB (1),51.8%
+115,Southeastern,2024,19–59 years old,HepB Complete,43.6%
+116,Southeastern,2024,19–64 years old,Td or Tdap,57.5%
+117,Southeastern,2024,19–64 years old,Tdap,52.9%
+118,Southeastern,2024,50 years and older,Zoster (Shingles) Complete,33.0%
+119,Southeastern,2025,19–26 years old,HPV Complete,56.8%
+120,Southeastern,2025,19–49 years old,HepA Complete,29.6%
+121,Southeastern,2025,19–59 years old,HepB (1),54.1%
+122,Southeastern,2025,19–59 years old,HepB Complete,45.9%
+123,Southeastern,2025,19–64 years old,Td or Tdap,57.7%
+124,Southeastern,2025,19–64 years old,Tdap,53.1%
+125,Southeastern,2025,50 years and older,Pneumo Complete,45.0%
+126,Southeastern,2025,50 years and older,Zoster (Shingles) Complete,35.9%
+127,Southern,2014,19–26 years old,HPV Complete,22.4%
+128,Southern,2015,19–26 years old,HPV Complete,24.5%
+129,Southern,2016,19–26 years old,HPV Complete,27.2%
+130,Southern,2017,19–26 years old,HPV Complete,31.1%
+131,Southern,2018,19–26 years old,HPV Complete,34.2%
+132,Southern,2018,50 years and older,Zoster (Shingles) Complete,1.8%
+133,Southern,2019,19–26 years old,HPV Complete,37.3%
+134,Southern,2019,19–49 years old,HepA Complete,11.7%
+135,Southern,2019,50 years and older,Zoster (Shingles) Complete,8.1%
+136,Southern,2020,19–26 years old,HPV Complete,37.6%
+137,Southern,2020,19–49 years old,HepA Complete,12.7%
+138,Southern,2020,50 years and older,Zoster (Shingles) Complete,15.6%
+139,Southern,2021,19–26 years old,HPV Complete,39.2%
+140,Southern,2021,19–49 years old,HepA Complete,13.9%
+141,Southern,2021,50 years and older,Zoster (Shingles) Complete,22.4%
+142,Southern,2022,19–26 years old,HPV Complete,41.4%
+143,Southern,2022,19–49 years old,HepA Complete,14.2%
+144,Southern,2022,19–59 years old,HepB (1),45.8%
+145,Southern,2022,19–59 years old,HepB Complete,38.2%
+146,Southern,2022,50 years and older,Zoster (Shingles) Complete,27.7%
+147,Southern,2023,19–26 years old,HPV Complete,47.8%
+148,Southern,2023,19–49 years old,HepA Complete,17.6%
+149,Southern,2023,19–59 years old,HepB (1),49.9%
+150,Southern,2023,19–59 years old,HepB Complete,42.2%
+151,Southern,2023,19–64 years old,Td or Tdap,60.9%
+152,Southern,2023,19–64 years old,Tdap,49.4%
+153,Southern,2023,50 years and older,Zoster (Shingles) Complete,35.1%
+154,Southern,2024,19–26 years old,HPV Complete,50.1%
+155,Southern,2024,19–49 years old,HepA Complete,19.4%
+156,Southern,2024,19–59 years old,HepB (1),52.5%
+157,Southern,2024,19–59 years old,HepB Complete,44.6%
+158,Southern,2024,19–64 years old,Td or Tdap,61.3%
+159,Southern,2024,19–64 years old,Tdap,49.6%
+160,Southern,2024,50 years and older,Zoster (Shingles) Complete,38.9%
+161,Southern,2025,19–26 years old,HPV Complete,52.0%
+162,Southern,2025,19–49 years old,HepA Complete,21.3%
+163,Southern,2025,19–59 years old,HepB (1),54.7%
+164,Southern,2025,19–59 years old,HepB Complete,46.7%
+165,Southern,2025,19–64 years old,Td or Tdap,61.5%
+166,Southern,2025,19–64 years old,Tdap,50.1%
+167,Southern,2025,50 years and older,Pneumo Complete,49.4%
+168,Southern,2025,50 years and older,Zoster (Shingles) Complete,41.9%
+169,Western,2014,19–26 years old,HPV Complete,20.4%
+170,Western,2015,19–26 years old,HPV Complete,22.0%
+171,Western,2016,19–26 years old,HPV Complete,25.1%
+172,Western,2017,19–26 years old,HPV Complete,28.8%
+173,Western,2018,19–26 years old,HPV Complete,31.9%
+174,Western,2018,50 years and older,Zoster (Shingles) Complete,2.5%
+175,Western,2019,19–26 years old,HPV Complete,35.3%
+176,Western,2019,19–49 years old,HepA Complete,8.4%
+177,Western,2019,50 years and older,Zoster (Shingles) Complete,7.6%
+178,Western,2020,19–26 years old,HPV Complete,37.8%
+179,Western,2020,19–49 years old,HepA Complete,9.8%
+180,Western,2020,50 years and older,Zoster (Shingles) Complete,14.7%
+181,Western,2021,19–26 years old,HPV Complete,40.1%
+182,Western,2021,19–49 years old,HepA Complete,10.8%
+183,Western,2021,50 years and older,Zoster (Shingles) Complete,20.7%
+184,Western,2022,19–26 years old,HPV Complete,42.6%
+185,Western,2022,19–49 years old,HepA Complete,11.1%
+186,Western,2022,19–59 years old,HepB (1),48.9%
+187,Western,2022,19–59 years old,HepB Complete,42.2%
+188,Western,2022,50 years and older,Zoster (Shingles) Complete,24.9%
+189,Western,2023,19–26 years old,HPV Complete,49.9%
+190,Western,2023,19–49 years old,HepA Complete,14.7%
+191,Western,2023,19–59 years old,HepB (1),52.6%
+192,Western,2023,19–59 years old,HepB Complete,46.2%
+193,Western,2023,19–64 years old,Td or Tdap,62.6%
+194,Western,2023,19–64 years old,Tdap,53.9%
+195,Western,2023,50 years and older,Zoster (Shingles) Complete,31.5%
+196,Western,2024,19–26 years old,HPV Complete,52.1%
+197,Western,2024,19–49 years old,HepA Complete,16.8%
+198,Western,2024,19–59 years old,HepB (1),55.0%
+199,Western,2024,19–59 years old,HepB Complete,48.3%
+200,Western,2024,19–64 years old,Td or Tdap,62.7%
+201,Western,2024,19–64 years old,Tdap,53.8%
+202,Western,2024,50 years and older,Zoster (Shingles) Complete,34.7%
+203,Western,2025,19–26 years old,HPV Complete,54.3%
+204,Western,2025,19–49 years old,HepA Complete,19.1%
+205,Western,2025,19–59 years old,HepB (1),57.1%
+206,Western,2025,19–59 years old,HepB Complete,50.4%
+207,Western,2025,19–64 years old,Td or Tdap,62.4%
+208,Western,2025,19–64 years old,Tdap,53.8%
+209,Western,2025,50 years and older,Pneumo Complete,46.7%
+210,Western,2025,50 years and older,Zoster (Shingles) Complete,38.0%

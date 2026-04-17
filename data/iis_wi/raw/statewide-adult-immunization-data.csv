@@ -1,0 +1,43 @@
+﻿Row,Age,Year,Vaccine,Percent
+13,19–49 years old,2025,HepA Complete,24.7%
+14,19–49 years old,2024,HepA Complete,22.4%
+15,19–49 years old,2023,HepA Complete,20.5%
+16,19–49 years old,2022,HepA Complete,16.4%
+17,19–49 years old,2021,HepA Complete,16.0%
+18,19–49 years old,2020,HepA Complete,14.6%
+19,19–49 years old,2019,HepA Complete,12.1%
+20,19–59 years old,2025,HepB (1),55.8%
+22,19–59 years old,2024,HepB (1),53.3%
+24,19–59 years old,2023,HepB (1),51.0%
+26,19–59 years old,2022,HepB (1),46.9%
+21,19–59 years old,2025,HepB Complete,48.6%
+23,19–59 years old,2024,HepB Complete,46.2%
+25,19–59 years old,2023,HepB Complete,44.1%
+27,19–59 years old,2022,HepB Complete,39.8%
+1,19–26 years old,2025,HPV Complete,55.2%
+2,19–26 years old,2024,HPV Complete,53.0%
+3,19–26 years old,2023,HPV Complete,50.7%
+4,19–26 years old,2022,HPV Complete,43.3%
+5,19–26 years old,2021,HPV Complete,40.5%
+6,19–26 years old,2020,HPV Complete,37.9%
+7,19–26 years old,2019,HPV Complete,36.1%
+8,19–26 years old,2018,HPV Complete,32.4%
+9,19–26 years old,2017,HPV Complete,29.0%
+10,19–26 years old,2016,HPV Complete,24.7%
+11,19–26 years old,2015,HPV Complete,21.7%
+12,19–26 years old,2014,HPV Complete,19.8%
+34,50 years and older,2025,Pneumo Complete,47.2%
+28,19–64 years old,2025,Td or Tdap,60.8%
+30,19–64 years old,2024,Td or Tdap,60.6%
+32,19–64 years old,2023,Td or Tdap,60.3%
+29,19–64 years old,2025,Tdap,52.8%
+31,19–64 years old,2024,Tdap,52.6%
+33,19–64 years old,2023,Tdap,52.6%
+35,50 years and older,2025,Zoster (Shingles) Complete,38.4%
+36,50 years and older,2024,Zoster (Shingles) Complete,35.4%
+37,50 years and older,2023,Zoster (Shingles) Complete,32.0%
+38,50 years and older,2022,Zoster (Shingles) Complete,25.3%
+39,50 years and older,2021,Zoster (Shingles) Complete,20.6%
+40,50 years and older,2020,Zoster (Shingles) Complete,14.6%
+41,50 years and older,2019,Zoster (Shingles) Complete,7.5%
+42,50 years and older,2018,Zoster (Shingles) Complete,1.9%

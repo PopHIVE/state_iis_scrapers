@@ -1,0 +1,91 @@
+{
+  "iis_covid_doses": {
+    "id": "iis_covid_doses",
+    "short_name": "VA COVID Doses Administered",
+    "long_name": "Virginia COVID-19 Vaccine Doses Administered",
+    "category": "immunization",
+    "short_description": "Number of COVID-19 vaccine doses administered in Virginia, by locality and respiratory season.",
+    "long_description": "Count of COVID-19 vaccine doses administered as reported to the Virginia Immunization Information System (VIIS). Data are available by locality and respiratory season via data.virginia.gov.",
+    "statement": "In {location}, {value} COVID-19 vaccine doses were administered.",
+    "measure_type": "Count",
+    "unit": "Doses",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "iis_covid_people": {
+    "id": "iis_covid_people",
+    "short_name": "VA COVID People Vaccinated",
+    "long_name": "Virginia COVID-19 People Vaccinated",
+    "category": "immunization",
+    "short_description": "Number of people who received a COVID-19 vaccine in Virginia, by locality and respiratory season.",
+    "long_description": "Count of people who received at least one COVID-19 vaccine dose as reported to the Virginia Immunization Information System (VIIS). Data are available by locality and respiratory season via data.virginia.gov.",
+    "statement": "In {location}, {value} people received a COVID-19 vaccine.",
+    "measure_type": "Count",
+    "unit": "People",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "iis_flu_doses": {
+    "id": "iis_flu_doses",
+    "short_name": "VA Flu Doses Administered",
+    "long_name": "Virginia Influenza Vaccine Doses Administered",
+    "category": "immunization",
+    "short_description": "Number of influenza vaccine doses administered in Virginia, by locality and respiratory season.",
+    "long_description": "Count of influenza vaccine doses administered as reported to the Virginia Immunization Information System (VIIS). Data are available by locality and respiratory season via data.virginia.gov.",
+    "statement": "In {location}, {value} influenza vaccine doses were administered.",
+    "measure_type": "Count",
+    "unit": "Doses",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "iis_flu_people": {
+    "id": "iis_flu_people",
+    "short_name": "VA Flu People Vaccinated",
+    "long_name": "Virginia Influenza People Vaccinated",
+    "category": "immunization",
+    "short_description": "Number of people who received an influenza vaccine in Virginia, by locality and respiratory season.",
+    "long_description": "Count of people who received at least one influenza vaccine dose as reported to the Virginia Immunization Information System (VIIS). Data are available by locality and respiratory season via data.virginia.gov.",
+    "statement": "In {location}, {value} people received an influenza vaccine.",
+    "measure_type": "Count",
+    "unit": "People",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "iis_covid_rate": {
+    "id": "iis_covid_rate",
+    "short_name": "VA COVID Vaccination Rate",
+    "long_name": "Virginia COVID-19 Vaccination Coverage Rate",
+    "category": "immunization",
+    "short_description": "COVID-19 vaccination coverage rate in Virginia, by locality and respiratory season.",
+    "long_description": "COVID-19 vaccination coverage rate as reported to the Virginia Immunization Information System (VIIS). Represents the percentage of the population vaccinated, by locality and respiratory season, via data.virginia.gov.",
+    "statement": "In {location}, {value}% of the population received a COVID-19 vaccine.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "iis_flu_rate": {
+    "id": "iis_flu_rate",
+    "short_name": "VA Flu Vaccination Rate",
+    "long_name": "Virginia Influenza Vaccination Coverage Rate",
+    "category": "immunization",
+    "short_description": "Influenza vaccination coverage rate in Virginia, by locality and respiratory season.",
+    "long_description": "Influenza vaccination coverage rate as reported to the Virginia Immunization Information System (VIIS). Represents the percentage of the population vaccinated, by locality and respiratory season, via data.virginia.gov.",
+    "statement": "In {location}, {value}% of the population received an influenza vaccine.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "va_viis" }]
+  },
+  "_sources": {
+    "va_viis": {
+      "name": "Virginia Immunization Information System (VIIS)",
+      "url": "https://data.virginia.gov/",
+      "organization": "Virginia Department of Health",
+      "organization_url": "https://www.vdh.virginia.gov/",
+      "description": "COVID-19 and influenza vaccination data from the Virginia Immunization Information System (VIIS), accessed via the data.virginia.gov open data portal (CKAN). Includes dose counts, people vaccinated, and coverage rates by locality for each respiratory season. Data cover Virginia localities (independent cities and counties).",
+      "restrictions": "Public domain. Virginia open data portal content is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

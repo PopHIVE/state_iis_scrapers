@@ -1,0 +1,11 @@
+{
+  "name": "iis_mn",
+  "title": "Iis Mn",
+  "licence": {
+    "url": "http://opendatacommons.org/licenses/pddl",
+    "name": "Open Data Commons Public Domain",
+    "version": "1.0",
+    "id": "odc-pddl"
+  },
+  "resources": []
+}

@@ -1,0 +1,33 @@
+{
+  "iis_{variant}": {
+    "id": "iis_{variant}",
+    "short_name": "TX Doses: {variant.short_name}",
+    "long_name": "Texas {variant.long_name} Doses Administered",
+    "category": "immunization",
+    "short_description": "Monthly count of {variant.long_name} doses administered in Texas, by county and age group.",
+    "long_description": "Monthly count of {variant.long_name} doses administered as reported to ImmTrac2, the Texas immunization registry. Data are reported by county and age group. ImmTrac2 is an opt-in registry, so counts may underrepresent total doses administered.",
+    "statement": "In {location}, {value} {variant.short_name} doses were administered.",
+    "measure_type": "Count",
+    "unit": "Doses",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tx_immtrac2" }],
+    "variants": {
+      "all_other": { "short_name": "All Other Vaccines", "long_name": "all other vaccine" },
+      "pediatric_mmr": { "short_name": "Pediatric MMR", "long_name": "pediatric MMR" },
+      "adolescent_hpv": { "short_name": "Adolescent HPV", "long_name": "adolescent HPV" },
+      "adolescent_mcv4": { "short_name": "Adolescent MCV4", "long_name": "adolescent MCV4 (Meningococcal)" },
+      "adolescent_td_tdap": { "short_name": "Adolescent Td/Tdap", "long_name": "adolescent Td/Tdap" }
+    }
+  },
+  "_sources": {
+    "tx_immtrac2": {
+      "name": "Texas ImmTrac2 Immunization Registry",
+      "url": "https://www.dshs.texas.gov/immunizations/data/program-data",
+      "organization": "Texas Department of State Health Services (DSHS)",
+      "organization_url": "https://www.dshs.texas.gov/",
+      "description": "Monthly doses administered from ImmTrac2, the Texas immunization registry operated by the Department of State Health Services. Data are reported by county and age group and cover multiple vaccine types. ImmTrac2 is an opt-in consent-based registry, meaning participation is voluntary and counts may not capture all immunizations administered in the state.",
+      "restrictions": "Public domain. Texas Department of State Health Services data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

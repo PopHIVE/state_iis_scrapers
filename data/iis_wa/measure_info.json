@@ -1,0 +1,94 @@
+{
+  "iis_infant_{variant}": {
+    "id": "iis_infant_{variant}",
+    "short_name": "WA Infant: {variant.short_name}",
+    "long_name": "Washington Infant {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of infants with {variant.long_name} vaccination in Washington, by county.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among infants, from the Washington State Immunization Information System (WAIIS). Data are reported as a point-in-time snapshot at the county level.",
+    "statement": "In {location}, {value}% of infants received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "wa_waiis" }],
+    "variants": {
+      "1_mmr": { "short_name": "MMR (1 dose)", "long_name": "MMR 1-dose" },
+      "1_varicella": { "short_name": "Varicella (1 dose)", "long_name": "Varicella 1-dose" },
+      "3_hep_b": { "short_name": "Hep B (3 doses)", "long_name": "Hepatitis B 3-dose" },
+      "3_hib": { "short_name": "Hib (3 doses)", "long_name": "Hib 3-dose" },
+      "3_poliovirus": { "short_name": "Polio (3 doses)", "long_name": "Poliovirus 3-dose" },
+      "4_dtap": { "short_name": "DTaP (4 doses)", "long_name": "DTaP 4-dose" },
+      "4_pcv": { "short_name": "PCV (4 doses)", "long_name": "PCV 4-dose" }
+    }
+  },
+  "iis_child_{variant}": {
+    "id": "iis_child_{variant}",
+    "short_name": "WA Child: {variant.short_name}",
+    "long_name": "Washington Child {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of children with {variant.long_name} vaccination in Washington, by county.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among children, from the Washington State Immunization Information System (WAIIS). Data are reported as a point-in-time snapshot at the county level.",
+    "statement": "In {location}, {value}% of children received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "wa_waiis" }],
+    "variants": {
+      "2_hep_a": { "short_name": "Hep A (2 doses)", "long_name": "Hepatitis A 2-dose" },
+      "2_mmr": { "short_name": "MMR (2 doses)", "long_name": "MMR 2-dose" },
+      "2_varicella": { "short_name": "Varicella (2 doses)", "long_name": "Varicella 2-dose" },
+      "3_hep_b": { "short_name": "Hep B (3 doses)", "long_name": "Hepatitis B 3-dose" },
+      "4_hib": { "short_name": "Hib (4 doses)", "long_name": "Hib 4-dose" },
+      "4_pcv": { "short_name": "PCV (4 doses)", "long_name": "PCV 4-dose" },
+      "4_poliovirus": { "short_name": "Polio (4 doses)", "long_name": "Poliovirus 4-dose" },
+      "5_dtap": { "short_name": "DTaP (5 doses)", "long_name": "DTaP 5-dose" }
+    }
+  },
+  "iis_preteen_{variant}": {
+    "id": "iis_preteen_{variant}",
+    "short_name": "WA Preteen: {variant.short_name}",
+    "long_name": "Washington Preteen {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of preteens with {variant.long_name} vaccination in Washington, by county.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among preteens, from the Washington State Immunization Information System (WAIIS). Data are reported as a point-in-time snapshot at the county level.",
+    "statement": "In {location}, {value}% of preteens received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "wa_waiis" }],
+    "variants": {
+      "1_hpv": { "short_name": "HPV (1 dose)", "long_name": "HPV 1-dose" },
+      "1_mcv": { "short_name": "MCV (1 dose)", "long_name": "Meningococcal 1-dose" },
+      "1_tdap": { "short_name": "Tdap (1 dose)", "long_name": "Tdap 1-dose" }
+    }
+  },
+  "iis_teen_{variant}": {
+    "id": "iis_teen_{variant}",
+    "short_name": "WA Teen: {variant.short_name}",
+    "long_name": "Washington Teen {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of teens with {variant.long_name} vaccination in Washington, by county.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among teens, from the Washington State Immunization Information System (WAIIS). Data are reported as a point-in-time snapshot at the county level.",
+    "statement": "In {location}, {value}% of teens received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "wa_waiis" }],
+    "variants": {
+      "utd_hpv": { "short_name": "HPV (up-to-date)", "long_name": "HPV up-to-date series" },
+      "1_mcv": { "short_name": "MCV (1 dose)", "long_name": "Meningococcal 1-dose" },
+      "1_tdap": { "short_name": "Tdap (1 dose)", "long_name": "Tdap 1-dose" }
+    }
+  },
+  "_sources": {
+    "wa_waiis": {
+      "name": "Washington State Immunization Information System (WAIIS)",
+      "url": "https://doh.wa.gov/",
+      "organization": "Washington State Department of Health",
+      "organization_url": "https://doh.wa.gov/",
+      "description": "Immunization coverage data from the Washington State Immunization Information System (WAIIS). Includes vaccination rates for infants, children, preteens, and teens across multiple vaccine types, reported as point-in-time snapshots at the county level. Coverage rates represent the percentage of the assessed population that has received the specified number of doses.",
+      "restrictions": "Public domain. Washington State Department of Health data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

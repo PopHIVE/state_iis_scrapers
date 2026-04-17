@@ -1,0 +1,23 @@
+{
+  "name": "iis_ny",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "frequency": 0,
+      "last_run": "",
+      "run_time": "",
+      "last_status": {
+        "log": "",
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "hash": "d552a3acefabb99b803275392f3dfc84"
+  }
+}

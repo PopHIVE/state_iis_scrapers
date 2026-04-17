@@ -1,0 +1,23 @@
+{
+  "name": "iis_mn",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "frequency": 0,
+      "last_run": "",
+      "run_time": "",
+      "last_status": {
+        "log": "",
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "hashes": ["6b368623cdd0d97d6ce5e49a95f00bfb", "2211379df01622325e560cb4080b8a51", "12b264022fc6515b9ac0fe5fe3095a96", "ff16c684b1ab1499a1655b6e54e1dedc", "086740271fb41eee86f35a046cf003fc", "1ef94e1e21e43545d3ff6c22df57edd2"]
+  }
+}

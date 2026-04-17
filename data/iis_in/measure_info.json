@@ -1,0 +1,49 @@
+{
+  "iis_{variant}_rate": {
+    "id": "iis_{variant}_rate",
+    "short_name": "IN School: {variant.short_name} Rate",
+    "long_name": "Indiana School {variant.long_name} Immunization Coverage Rate",
+    "category": "immunization",
+    "short_description": "Percentage of students with {variant.long_name} vaccination in Indiana, by county and grade.",
+    "long_description": "School immunization coverage rate for {variant.long_name} from the Indiana Children and Hoosiers Immunization Registry Program (CHIRP), accessed via hub.mph.in.gov. Data are reported by county and grade level.",
+    "statement": "In {location}, {value}% of students received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "in_chirp" }],
+    "variants": {
+      "dtap": { "short_name": "DTaP", "long_name": "DTaP" },
+      "tdap": { "short_name": "Tdap", "long_name": "Tdap" },
+      "ipv": { "short_name": "IPV", "long_name": "IPV (Polio)" },
+      "mmr": { "short_name": "MMR", "long_name": "MMR" },
+      "hepb": { "short_name": "Hep B", "long_name": "Hepatitis B" },
+      "var": { "short_name": "Varicella", "long_name": "Varicella" },
+      "hepa": { "short_name": "Hep A", "long_name": "Hepatitis A" },
+      "mcv4": { "short_name": "MCV4", "long_name": "MCV4 (Meningococcal)" }
+    }
+  },
+  "iis_enrollment": {
+    "id": "iis_enrollment",
+    "short_name": "IN School Enrollment",
+    "long_name": "Indiana School Enrollment Count",
+    "category": "immunization",
+    "short_description": "Number of students enrolled in Indiana schools, by county and grade.",
+    "long_description": "School enrollment count from the Indiana Children and Hoosiers Immunization Registry Program (CHIRP), accessed via hub.mph.in.gov. Represents the total number of students assessed for immunization compliance, by county and grade level.",
+    "statement": "In {location}, {value} students were enrolled.",
+    "measure_type": "Count",
+    "unit": "Students",
+    "time_resolution": "Year",
+    "sources": [{ "id": "in_chirp" }]
+  },
+  "_sources": {
+    "in_chirp": {
+      "name": "Indiana Children and Hoosiers Immunization Registry Program (CHIRP)",
+      "url": "https://hub.mph.in.gov/",
+      "organization": "Indiana Department of Health",
+      "organization_url": "https://www.in.gov/health/",
+      "description": "School immunization coverage data from the Indiana Children and Hoosiers Immunization Registry Program (CHIRP), accessed via the Indiana Management Performance Hub (hub.mph.in.gov). Includes vaccination rates for multiple routine childhood and adolescent vaccines, as well as school enrollment counts, reported by county and grade level.",
+      "restrictions": "Public domain. Indiana state government data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

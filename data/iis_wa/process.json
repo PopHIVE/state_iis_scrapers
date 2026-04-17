@@ -1,0 +1,23 @@
+{
+  "name": "iis_wa",
+  "type": "source",
+  "scripts": [
+    {
+      "path": "ingest.R",
+      "manual": false,
+      "frequency": 0,
+      "last_run": "",
+      "run_time": "",
+      "last_status": {
+        "log": "",
+        "success": true
+      }
+    }
+  ],
+  "checked": "",
+  "check_results": [],
+  "standalone": false,
+  "raw_state": {
+    "hashes": ["72ea803dc8a765aa0f13baaa722a8e80", "be4367a9c771cf389fc24ff05b405666", "6aab932c460120fbf5e4ac9f86cc27e6", "c9d2eea884fbff1ea78cd709c0022c36", "0821b906acf74112e936174c8a7591a0", "dcd16a8f4d9e724a87ff40ee2702f55b"]
+  }
+}

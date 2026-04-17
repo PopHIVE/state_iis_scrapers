@@ -1,0 +1,39 @@
+{
+  "iis_covid_doses": {
+    "id": "iis_covid_doses",
+    "short_name": "NY COVID Doses Administered",
+    "long_name": "New York COVID-19 Vaccine Doses Administered",
+    "category": "immunization",
+    "short_description": "Weekly count of COVID-19 vaccine doses administered in New York State (excluding NYC), by county.",
+    "long_description": "Weekly count of COVID-19 vaccine doses administered as reported to the New York State Immunization Information System (NYSIIS). Data are available by county via health.data.ny.gov (Socrata). New York City is excluded as it maintains a separate immunization registry (CIR).",
+    "statement": "In {location}, {value} COVID-19 vaccine doses were administered.",
+    "measure_type": "Count",
+    "unit": "Doses",
+    "time_resolution": "Week",
+    "sources": [{ "id": "ny_nysiis" }]
+  },
+  "iis_flu_doses": {
+    "id": "iis_flu_doses",
+    "short_name": "NY Flu Doses Administered",
+    "long_name": "New York Influenza Vaccine Doses Administered",
+    "category": "immunization",
+    "short_description": "Weekly count of influenza vaccine doses administered in New York State (excluding NYC), by county.",
+    "long_description": "Weekly count of influenza vaccine doses administered as reported to the New York State Immunization Information System (NYSIIS). Data are available by county via health.data.ny.gov (Socrata). New York City is excluded as it maintains a separate immunization registry (CIR).",
+    "statement": "In {location}, {value} influenza vaccine doses were administered.",
+    "measure_type": "Count",
+    "unit": "Doses",
+    "time_resolution": "Week",
+    "sources": [{ "id": "ny_nysiis" }]
+  },
+  "_sources": {
+    "ny_nysiis": {
+      "name": "New York State Immunization Information System (NYSIIS)",
+      "url": "https://health.data.ny.gov/",
+      "organization": "New York State Department of Health",
+      "organization_url": "https://www.health.ny.gov/",
+      "description": "COVID-19 and influenza vaccine dose counts from the New York State Immunization Information System (NYSIIS), accessed via the health.data.ny.gov open data portal (Socrata). Data are reported weekly at the county level. New York City is excluded as it operates its own Citywide Immunization Registry (CIR).",
+      "restrictions": "Public domain. New York State open data portal content is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

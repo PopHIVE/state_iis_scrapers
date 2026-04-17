@@ -1,0 +1,80 @@
+{
+  "iis_infant_{variant}": {
+    "id": "iis_infant_{variant}",
+    "short_name": "Infant (24mo): {variant.short_name}",
+    "long_name": "Infant (24 months) {variant.long_name} Rate",
+    "category": "immunization",
+    "short_description": "Percentage of children assessed at 24 months with {variant.long_name} vaccination.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among children assessed at 24 months of age, from the Minnesota Immunization Information Connection (MIIC). Data are reported by birth year cohort at county and statewide levels.",
+    "statement": "In {location}, {value}% of children (24 months) received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "mn_miic" }],
+    "variants": {
+      "dtap_rate": { "short_name": "DTaP", "long_name": "DTaP" },
+      "mmr_rate": { "short_name": "MMR", "long_name": "MMR" },
+      "hepb_rate": { "short_name": "Hep B", "long_name": "Hepatitis B" },
+      "hib_rate": { "short_name": "Hib", "long_name": "Hib" },
+      "ipv_rate": { "short_name": "Polio (IPV)", "long_name": "Polio (IPV)" },
+      "var_rate": { "short_name": "Varicella", "long_name": "Varicella" },
+      "pcv_rate": { "short_name": "PCV", "long_name": "PCV" },
+      "series_rate": { "short_name": "Full Series", "long_name": "complete childhood series" },
+      "pop": { "short_name": "Population", "long_name": "population count" }
+    }
+  },
+  "iis_child_{variant}": {
+    "id": "iis_child_{variant}",
+    "short_name": "Child (6yr): {variant.short_name}",
+    "long_name": "Child (6 years) {variant.long_name} Rate",
+    "category": "immunization",
+    "short_description": "Percentage of children assessed at 6 years with {variant.long_name} vaccination.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among children assessed at 6 years of age, from the Minnesota Immunization Information Connection (MIIC). Data are reported by birth year cohort at county and statewide levels.",
+    "statement": "In {location}, {value}% of children (6 years) received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "mn_miic" }],
+    "variants": {
+      "dtap_rate": { "short_name": "DTaP", "long_name": "DTaP" },
+      "mmr_rate": { "short_name": "MMR", "long_name": "MMR" },
+      "hepb_rate": { "short_name": "Hep B", "long_name": "Hepatitis B" },
+      "ipv_rate": { "short_name": "Polio (IPV)", "long_name": "Polio (IPV)" },
+      "var_rate": { "short_name": "Varicella", "long_name": "Varicella" },
+      "series_rate": { "short_name": "Full Series", "long_name": "complete childhood series" },
+      "pop": { "short_name": "Population", "long_name": "population count" }
+    }
+  },
+  "iis_teen_{variant}": {
+    "id": "iis_teen_{variant}",
+    "short_name": "Teen (13yr): {variant.short_name}",
+    "long_name": "Teen (13 years) {variant.long_name} Rate",
+    "category": "immunization",
+    "short_description": "Percentage of adolescents assessed at 13 years with {variant.long_name} vaccination.",
+    "long_description": "Immunization coverage rate for {variant.long_name} among adolescents assessed at 13 years of age, from the Minnesota Immunization Information Connection (MIIC). Data are reported by birth year cohort at county and statewide levels.",
+    "statement": "In {location}, {value}% of adolescents (13 years) received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "mn_miic" }],
+    "variants": {
+      "hpv_initiated_rate": { "short_name": "HPV (1+ dose)", "long_name": "HPV 1+ dose" },
+      "hpv_rate": { "short_name": "HPV (complete)", "long_name": "HPV complete series" },
+      "mcv4_rate": { "short_name": "MenACWY", "long_name": "MenACWY" },
+      "tdap_rate": { "short_name": "Tdap", "long_name": "Tdap" },
+      "series_rate": { "short_name": "Full Series", "long_name": "complete adolescent series" },
+      "pop": { "short_name": "Population", "long_name": "population count" }
+    }
+  },
+  "_sources": {
+    "mn_miic": {
+      "name": "Minnesota Immunization Information Connection (MIIC)",
+      "url": "https://www.health.mn.gov/people/immunize/stats/gaps.html",
+      "organization": "Minnesota Department of Health",
+      "organization_url": "https://www.health.mn.gov/",
+      "description": "Immunization coverage data from the Minnesota Immunization Information Connection (MIIC). Includes vaccination rates for early childhood (24 months), middle childhood (6 years), and adolescent (13 years) age groups, reported by birth year cohort. County-level and statewide data are available, along with race/ethnicity breakdowns at the state level.",
+      "restrictions": "Public domain. Minnesota Department of Health data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}

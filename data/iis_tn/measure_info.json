@@ -1,0 +1,109 @@
+{
+  "iis_child_{variant}": {
+    "id": "iis_child_{variant}",
+    "short_name": "TN Child (2-3): {variant.short_name}",
+    "long_name": "Tennessee Child (ages 2-3) {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Monthly {variant.long_name} vaccination coverage rate for children ages 2-3 in Tennessee, by county.",
+    "long_description": "Vaccination coverage rate from the Tennessee Immunization Information System (TennIIS) for {variant.long_name} among children ages 2-3. Data are reported monthly at the county level. Values of 777 in source data indicate suppressed counts and are set to NA.",
+    "statement": "In {location}, {value}% of children ages 2-3 received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tn_tenniis" }],
+    "variants": {
+      "dtap": { "short_name": "DTaP", "long_name": "DTaP" },
+      "daycareseries": { "short_name": "Daycare Series", "long_name": "daycare series" },
+      "hepa": { "short_name": "Hep A", "long_name": "Hepatitis A" },
+      "hepb": { "short_name": "Hep B", "long_name": "Hepatitis B" },
+      "hib": { "short_name": "Hib", "long_name": "Hib" },
+      "ipv": { "short_name": "IPV", "long_name": "IPV (Polio)" },
+      "mmr": { "short_name": "MMR", "long_name": "MMR" },
+      "pcv": { "short_name": "PCV", "long_name": "PCV (Pneumococcal)" },
+      "rotavirus": { "short_name": "Rotavirus", "long_name": "Rotavirus" },
+      "var": { "short_name": "Varicella", "long_name": "Varicella" }
+    }
+  },
+  "iis_school_{variant}": {
+    "id": "iis_school_{variant}",
+    "short_name": "TN School (4-6): {variant.short_name}",
+    "long_name": "Tennessee School-age (4-6) {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Monthly {variant.long_name} vaccination coverage rate for children ages 4-6 in Tennessee, by county.",
+    "long_description": "Vaccination coverage rate from TennIIS for {variant.long_name} among children ages 4-6. Reported monthly at the county level.",
+    "statement": "In {location}, {value}% of children ages 4-6 received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tn_tenniis" }],
+    "variants": {
+      "dtap": { "short_name": "DTaP", "long_name": "DTaP" },
+      "hepa": { "short_name": "Hep A", "long_name": "Hepatitis A" },
+      "hepb": { "short_name": "Hep B", "long_name": "Hepatitis B" },
+      "ipv": { "short_name": "IPV", "long_name": "IPV (Polio)" },
+      "kindergartenseries": { "short_name": "K Series", "long_name": "kindergarten series" },
+      "mmr": { "short_name": "MMR", "long_name": "MMR" },
+      "var": { "short_name": "Varicella", "long_name": "Varicella" }
+    }
+  },
+  "iis_teen_{variant}": {
+    "id": "iis_teen_{variant}",
+    "short_name": "TN Teen (11-17): {variant.short_name}",
+    "long_name": "Tennessee Teen (11-17) {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Monthly {variant.long_name} vaccination coverage rate for teens ages 11-17 in Tennessee, by county.",
+    "long_description": "Vaccination coverage rate from TennIIS for {variant.long_name} among adolescents ages 11-17. Reported monthly at the county level.",
+    "statement": "In {location}, {value}% of teens ages 11-17 received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tn_tenniis" }],
+    "variants": {
+      "hpv": { "short_name": "HPV", "long_name": "HPV" },
+      "menacwy": { "short_name": "MenACWY", "long_name": "MenACWY" },
+      "tdap": { "short_name": "Tdap", "long_name": "Tdap" }
+    }
+  },
+  "iis_adult_tdap": {
+    "id": "iis_adult_tdap",
+    "short_name": "TN Adult (18-64): Tdap",
+    "long_name": "Tennessee Adult (18-64) Tdap Coverage Rate",
+    "category": "immunization",
+    "short_description": "Monthly Tdap vaccination coverage rate for adults ages 18-64 in Tennessee, by county.",
+    "long_description": "Vaccination coverage rate from TennIIS for Tdap among adults ages 18-64. Reported monthly at the county level.",
+    "statement": "In {location}, {value}% of adults ages 18-64 received Tdap.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tn_tenniis" }]
+  },
+  "iis_senior_{variant}": {
+    "id": "iis_senior_{variant}",
+    "short_name": "TN Senior (65+): {variant.short_name}",
+    "long_name": "Tennessee Senior (65+) {variant.long_name} Coverage Rate",
+    "category": "immunization",
+    "short_description": "Monthly {variant.long_name} vaccination coverage rate for adults 65+ in Tennessee, by county.",
+    "long_description": "Vaccination coverage rate from TennIIS for {variant.long_name} among adults ages 65 and older. Reported monthly at the county level.",
+    "statement": "In {location}, {value}% of adults 65+ received {variant.short_name}.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Month",
+    "sources": [{ "id": "tn_tenniis" }],
+    "variants": {
+      "pneumococcal": { "short_name": "Pneumococcal", "long_name": "Pneumococcal" },
+      "shingles": { "short_name": "Shingles", "long_name": "Shingles (Zoster)" },
+      "tdap": { "short_name": "Tdap", "long_name": "Tdap" }
+    }
+  },
+  "_sources": {
+    "tn_tenniis": {
+      "name": "Tennessee Immunization Information System (TennIIS)",
+      "url": "https://www.tn.gov/health/cedep/immunization-program/ip/immunization-fact-sheet/coverage-rate-dashboard.html",
+      "organization": "Tennessee Department of Health",
+      "organization_url": "https://www.tn.gov/health.html",
+      "description": "Vaccination coverage rates from the Tennessee Immunization Information System (TennIIS), the state's immunization registry. Data covers five age groups (2-3, 4-6, 11-17, 18-64, 65+) with multiple vaccine types per group, reported monthly at the county level. Rates above 100 or coded as 777 indicate suppressed values.",
+      "restrictions": "Public domain. Tennessee state government data is freely available for public use.",
+      "date_accessed": 2026
+    }
+  }
+}
