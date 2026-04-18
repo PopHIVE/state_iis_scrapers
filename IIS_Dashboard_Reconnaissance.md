@@ -95,24 +95,76 @@ These states provide data as static CSV or Excel files, or via a public REST API
 
 ## Tier 2: Requires API Reverse-Engineering (10 states)
 
-These states use interactive dashboards (Tableau, ArcGIS, R Shiny) that do not offer direct file downloads. Data extraction requires identifying hidden API endpoints or using Tableau Server export URLs.
+These states use interactive dashboards (Tableau, ArcGIS, R Shiny) that do not offer direct file downloads. Data extraction requires identifying hidden API endpoints or using Tableau Server export URLs. **Phase 2 recon (April 2026) identified working endpoints for 4 states; 6 remain blocked or require further investigation.**
 
-| State | Abbrev | Platform | Data Available |
-|-------|--------|----------|----------------|
-| Illinois | `iis_il` | Tableau (public.data.illinois.gov) | School vaccination, flu, COVID, Head Start; 4 dashboards |
-| Iowa | `iis_ia` | Tableau (data.idph.state.ia.us) | Childhood (2yr) by county |
-| Kansas | `iis_ks` | Tableau (kshealthdata.kdhe.ks.gov) | Kindergarten coverage, influenza |
-| Louisiana | `iis_la` | Tableau (analytics.la.gov) | 7-Series, 10-Series, HPV by parish |
-| Massachusetts | `iis_ma` | Tableau Server | RSV immunizations by county/town |
-| Oregon | `iis_or` | Tableau Public | Child, adolescent, adult, school, respiratory; 11+ dashboards |
-| North Carolina | `iis_nc` | Custom dashboard | COVID, Flu, RSV (adult + pediatric); download button present |
-| California | `iis_ca` | ArcGIS Dashboard | COVID/respiratory vaccines; feature service URLs to reverse-engineer |
-| Utah | `iis_ut` | R Shiny app | Early childhood, teen, adult, flu, school exemptions |
-| NYC | `iis_nyc` | Open data portal | Childhood vaccination; portal timed out during recon |
+### Tier 2A: Implemented (4 states)
 
-**Recommended approach for Tableau states**: Use the Tableau Server REST API or the `?:format=csv` download URL pattern (`https://[server]/views/[workbook]/[view].csv`). Many Tableau Public dashboards support direct CSV export if the author has enabled it.
+#### NYC (`iis_nyc`) — GitHub CSV
+- **Source**: NYC DOHMH Citywide Immunization Registry (CIR)
+- **Data URL**: `https://raw.githubusercontent.com/nychealth/immunization-data/main/geo/Main_Routine_Vaccine_Geo.csv`
+- **Demo URL**: `https://raw.githubusercontent.com/nychealth/immunization-data/main/demo/Main_Routine_Vaccine_Demo.csv`
+- **Geography**: MODZCTA (ZIP code area) aggregated to borough (county FIPS)
+- **Time coverage**: Q2/Q4 semi-annual, 2016–present
+- **Vaccines**: 7-series, DTaP, MMR, HepB, Hib, PCV, IPV, Varicella (24-35 months); HPV (13-17yr); Flu (by age group)
+- **Notes**: RACE_ETHNICITY values include ", non-Hispanic" suffix; AGE_GROUP in demo file uses no spaces ("24-35 months" vs "24 - 35 months" in geo file); geography="36" used for NYC-wide demo data
+- **Output**: `standard/data.csv.gz` (routine vaccines), `standard/data_flu.csv.gz` (flu by age), `standard/data_race.csv.gz` (race/ethnicity)
 
-**Recommended approach for ArcGIS states**: Inspect the network requests in browser DevTools to identify the FeatureServer REST endpoint, then use `httr::GET` with the query parameters `f=json&where=1=1&outFields=*`.
+#### Massachusetts (`iis_ma`) — Tableau Server CSV
+- **Source**: MA DPH MIIS — Respiratory Diseases Immunizations Dashboard
+- **Working URL**: `https://datavisualization.dph.mass.gov/views/MDPHRespiratoryDiseasesImmunizationsDashboard/County.csv`
+- **Geography**: 14 MA counties → FIPS (state 25)
+- **Time**: Current season snapshot; `End Date (Extract1)` field provides date
+- **Vaccines**: Currently only influenza in the County sheet; COVID/RSV may appear in future seasons
+- **Notes**: Tableau column names are non-standard (e.g., "Percent or number by town (n)"); needs Referer header; updated weekly on Thursdays
+- **Output**: `standard/data.csv.gz` (pivoted wide by vaccine type)
+
+#### Illinois (`iis_il`) — Tableau Server CSV
+- **Source**: IL IDPH — I-CARE Influenza Vaccination Coverage Dashboard
+- **Working URL**: `https://public.data.illinois.gov/t/Public/views/InfluenzaVaccinationCoverage_Public/Home.csv`
+- **Geography**: 102 IL counties (all-caps names) → FIPS (state 17)
+- **Time**: Current season snapshot; no date column in CSV — time computed from current season end date
+- **Data**: Flu vaccination rate (%), vaccine count, population denominator; suppression flag
+- **Notes**: Column names must be assigned by position; rate values have "%" suffix; counts have commas. The school vaccination dashboard (`SchoolVaccinationCoverage/Home.csv`) only returns 1 aggregated row, not county-level data.
+- **Other dashboards found**: COVID (`COVIDUTDAnalysis_DirectSQL_ForPublicPublishing/Dashboard`), Head Start (`HeadStartProgramOverview/Dashboard`) — CSV export not tested
+- **Output**: `standard/data.csv.gz`
+
+#### California (`iis_ca`) — CHHS Open Data Portal (school kindergarten)
+- **Source**: CDPH via CA Health and Human Services Open Data Portal (CKAN)
+- **Dataset**: School Immunizations in Kindergarten by Academic Year
+- **Dataset ID**: `bc38e725-9180-49e7-97e5-e16cb413a40c`
+- **Data URLs** (3 multi-year files; most recent through 2022-23; no 2023-24 data yet):
+  - 2019-23: `https://data.chhs.ca.gov/dataset/bc38e725.../resource/a269c0af.../download/kindergarten_immunizations_academic_year_2019-20-to-2022-23.csv`
+  - 2016-19: `https://data.chhs.ca.gov/dataset/bc38e725.../resource/4319a7e8.../download/iz_kindergarten2016-17_to_2018-19_school_year.csv`
+  - 2013-16: `https://data.chhs.ca.gov/dataset/bc38e725.../resource/b17f85b5.../download/school-immunizations-in-kindergarten-by-academic-year-2013-2014-to-2015-16.csv`
+- **Geography**: School-level data aggregated to county using enrollment-weighted counts
+- **Time**: School year end date (June 30 of graduation year); e.g., "2022-23" → 2023-06-30
+- **Vaccines**: DTP, HEPB, MMR2, POLIO, VARI, UP-TO-DATE (categories from annual school assessment)
+- **Notes**: ANNOTATION_CODE flags suppressed records (<10 students); REPORTED=="Y" filter required; school-level PERCENT may differ from county aggregate due to suppression; CA dashboard at arcgis.com is for COVID/respiratory vaccines (CAIR2 registry), separate from school data
+- **Output**: `standard/data.csv.gz`
+
+---
+
+### Tier 2B: Not Yet Implemented (6 states)
+
+| State | Abbrev | Platform | Recon Finding | Next Steps |
+|-------|--------|----------|---------------|------------|
+| Iowa | `iis_ia` | Tableau (data.idph.state.ia.us) | CSV exports return HTTP 200 but 0 bytes (session auth required) | Test with httr session cookies from initial page load |
+| Kansas | `iis_ks` | Tableau (kshealthdata.kdhe.ks.gov) | Kindergarten dashboard URL not published; server confirmed at `kshealthdata.kdhe.ks.gov/t/KDHE/` | Try `KindergartenVaccination` workbook; contact kdhe.ImmunizationRegistry@ks.gov |
+| Louisiana | `iis_la` | Tableau (analytics.la.gov) | All CSV export attempts return `{"type":"missing-view"}`; workbook confirmed as `ImmunizationDashboardConsolidated` | Try Tableau REST API bootstrap approach; inspect page source for session token |
+| Oregon | `iis_or` | Tableau Public | CSV export redirects to JS application shell (not CSV); Tableau Public API requires browser | Consider browser automation (RSelenium) or check for Excel download on OHA research page |
+| North Carolina | `iis_nc` | Custom dashboard | Dashboard has "Data Behind the Dashboards" section; no direct CSV URL found; data from NCIR | Check `https://covid19.ncdhhs.gov/dashboard/data-behind-dashboards` for downloadable data |
+| Utah | `iis_ut` | R Shiny | Confirmed R Shiny at `https://avrpublic.dhhs.utah.gov/imms_dashboard/`; no direct API; uses NIS, BRFSS, USIIS data | Browser automation (RSelenium) or data request via Google Form at `immunize@utah.gov` |
+
+**Notes on Tableau CSV export approach**: The `?:format=csv` pattern works when the Tableau Server has download enabled for that view. Iowa returns empty files (likely session auth required). Louisiana returns "missing-view" JSON (sheet name wrong or CSV export disabled). Illinois and Massachusetts successfully return CSV data. For Iowa, try initiating a session first:
+```r
+# Iowa session-based approach (untested)
+session <- httr::GET("https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map")
+cookies <- httr::cookies(session)
+data_resp <- httr::GET(
+  "https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map.csv",
+  httr::set_cookies(.cookies = setNames(cookies$value, cookies$name))
+)
+```
 
 ---
 
@@ -206,24 +258,24 @@ The table below shows which vaccines are available from each implemented state. 
 
 | State | Directory | Status | Output files |
 |-------|-----------|--------|--------------|
-| Minnesota | `data/iis_mn` | Complete | `standard/data.csv.gz`, `standard/data_race.csv.gz` |
+| Minnesota | `data/iis_mn` | Complete | `standard/data.csv.gz`, `standard/data_race_ethnicity.csv.gz` |
 | Tennessee | `data/iis_tn` | Complete | `standard/data.csv.gz` |
-| Washington | `data/iis_wa` | Complete | `standard/data.csv.gz`, `standard/data_race.csv.gz` |
+| Washington | `data/iis_wa` | Complete | `standard/data.csv.gz`, `standard/data_race_ethnicity.csv.gz` |
 | Wisconsin | `data/iis_wi` | Complete | `standard/data.csv.gz` |
-| Virginia | `data/iis_va` | Complete | `standard/data.csv.gz`, `standard/data_race.csv.gz` |
+| Virginia | `data/iis_va` | Complete | `standard/data.csv.gz`, `standard/data_race_ethnicity.csv.gz` |
 | New York State | `data/iis_ny` | Complete | `standard/data.csv.gz` |
 | Texas | `data/iis_tx` | Complete | `standard/data.csv.gz` |
 | Indiana | `data/iis_in` | Complete | `standard/data.csv.gz` |
-| Illinois | `data/iis_il` | Planned (Tier 2) | — |
-| Iowa | `data/iis_ia` | Planned (Tier 2) | — |
-| Kansas | `data/iis_ks` | Planned (Tier 2) | — |
-| Louisiana | `data/iis_la` | Planned (Tier 2) | — |
-| Massachusetts | `data/iis_ma` | Planned (Tier 2) | — |
-| Oregon | `data/iis_or` | Planned (Tier 2) | — |
-| North Carolina | `data/iis_nc` | Planned (Tier 2) | — |
-| California | `data/iis_ca` | Planned (Tier 2) | — |
-| Utah | `data/iis_ut` | Planned (Tier 2) | — |
-| NYC | `data/iis_nyc` | Planned (Tier 2) | — |
+| NYC | `data/iis_nyc` | Complete (Tier 2A) | `standard/data.csv.gz`, `standard/data_flu.csv.gz`, `standard/data_race.csv.gz` |
+| Massachusetts | `data/iis_ma` | Complete (Tier 2A) | `standard/data.csv.gz` |
+| Illinois | `data/iis_il` | Complete (Tier 2A) | `standard/data.csv.gz` |
+| California | `data/iis_ca` | Complete (Tier 2A) | `standard/data.csv.gz` |
+| Iowa | `data/iis_ia` | Blocked (Tier 2B) — session auth | — |
+| Kansas | `data/iis_ks` | Blocked (Tier 2B) — URL not found | — |
+| Louisiana | `data/iis_la` | Blocked (Tier 2B) — sheet name unknown | — |
+| Oregon | `data/iis_or` | Blocked (Tier 2B) — JS frontend | — |
+| North Carolina | `data/iis_nc` | Blocked (Tier 2B) — no direct download | — |
+| Utah | `data/iis_ut` | Blocked (Tier 2B) — R Shiny, no API | — |
 | Arizona | `data/iis_az` | Blocked (Tier 3) | — |
 | Colorado | `data/iis_co` | Blocked (Tier 3) | — |
 | Kentucky | `data/iis_ky` | Blocked (Tier 3) | — |

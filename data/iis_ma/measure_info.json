@@ -1,0 +1,54 @@
+{
+  "iis_flu_rate": {
+    "id": "iis_flu_rate",
+    "short_name": "MA county influenza vaccination rate",
+    "long_name": "Massachusetts MIIS: Influenza vaccination rate by county, current season",
+    "category": "immunization",
+    "short_description": "Percentage of Massachusetts residents vaccinated against influenza in the current season, by county.",
+    "long_description": "Percentage of the Massachusetts population vaccinated against seasonal influenza, by county, as reported to the Massachusetts Immunization Information System (MIIS). Data are extracted from the MDPH Respiratory Diseases Immunizations Dashboard (Tableau Server) and reflect cumulative coverage for the current respiratory season (July-June). The dashboard is updated weekly on Thursdays. Note: This is a population-level estimate that includes all individuals vaccinated in Massachusetts regardless of age.",
+    "statement": "In {location}, {value}% of residents were vaccinated against influenza in the current season.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Week",
+    "sources": [{ "id": "ma_miis" }]
+  },
+  "iis_covid_rate": {
+    "id": "iis_covid_rate",
+    "short_name": "MA county COVID vaccination rate",
+    "long_name": "Massachusetts MIIS: COVID-19 vaccination rate by county, current season",
+    "category": "immunization",
+    "short_description": "Percentage of Massachusetts residents vaccinated against COVID-19 in the current season, by county.",
+    "long_description": "Percentage of the Massachusetts population vaccinated against COVID-19 (updated formulation), by county, as reported to the Massachusetts Immunization Information System (MIIS). Data reflect cumulative coverage for the current respiratory season.",
+    "statement": "In {location}, {value}% of residents received a COVID-19 vaccine in the current season.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Week",
+    "sources": [{ "id": "ma_miis" }]
+  },
+  "iis_rsv_rate": {
+    "id": "iis_rsv_rate",
+    "short_name": "MA county RSV vaccination rate",
+    "long_name": "Massachusetts MIIS: RSV vaccination rate by county, current season",
+    "category": "immunization",
+    "short_description": "Percentage of Massachusetts residents vaccinated against RSV in the current season, by county.",
+    "long_description": "Percentage of the Massachusetts population vaccinated against RSV (respiratory syncytial virus), by county, as reported to the Massachusetts Immunization Information System (MIIS).",
+    "statement": "In {location}, {value}% of residents received an RSV vaccine in the current season.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Week",
+    "sources": [{ "id": "ma_miis" }]
+  },
+  "_sources": {
+    "ma_miis": {
+      "name": "Massachusetts Immunization Information System (MIIS)",
+      "url": "https://datavisualization.dph.mass.gov/views/MDPHRespiratoryDiseasesImmunizationsDashboard/Overview",
+      "organization": "Massachusetts Department of Public Health (MDPH)",
+      "organization_url": "http://www.mass.gov/dph",
+      "location": "MDPH Respiratory Diseases Immunizations Dashboard",
+      "location_url": "https://www.mass.gov/info-details/immunizations-for-respiratory-diseases",
+      "description": "The Massachusetts Immunization Information System (MIIS) is a confidential, population-based registry that collects and stores vaccination records for residents of Massachusetts. The MDPH Respiratory Diseases Immunizations Dashboard provides county-level and town-level influenza, COVID-19, and RSV vaccination coverage for the current respiratory season (July through June). Data are updated weekly on Thursdays and extracted via the Tableau Server CSV export endpoint. Coverage estimates represent vaccinations administered to Massachusetts residents and reported to MIIS.",
+      "restrictions": "Public domain. Massachusetts DPH data is generally not subject to copyright restrictions.",
+      "date_accessed": 2026
+    }
+  }
+}

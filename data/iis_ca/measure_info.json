@@ -1,0 +1,93 @@
+{
+  "iis_child_dtap_rate": {
+    "id": "iis_child_dtap_rate",
+    "short_name": "CA kindergarten DTP vaccination rate",
+    "long_name": "California CAIR2: DTP vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students up-to-date on DTP vaccines, by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools who are up-to-date on diphtheria, tetanus, and pertussis (DTP/DTaP) vaccination, as assessed by the annual California School Immunization Assessment. Data are aggregated from school-level reports to the county level using enrollment-weighted counts. Schools with fewer than 10 students use suppressed data (excluded from aggregation). Data come from the California CHHS Open Data Portal.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on DTP vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "iis_child_mmr_rate": {
+    "id": "iis_child_mmr_rate",
+    "short_name": "CA kindergarten MMR vaccination rate",
+    "long_name": "California CAIR2: MMR vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students up-to-date on MMR vaccines (2 doses), by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools who have received 2 doses of MMR (measles, mumps, rubella) vaccine, as assessed by the annual California School Immunization Assessment.",
+    "statement": "In {location}, {value}% of kindergarteners had 2+ MMR doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "iis_child_hepb_rate": {
+    "id": "iis_child_hepb_rate",
+    "short_name": "CA kindergarten HepB vaccination rate",
+    "long_name": "California CAIR2: Hepatitis B vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students up-to-date on Hepatitis B vaccines, by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools with a complete Hepatitis B vaccination series, as assessed by the annual California School Immunization Assessment.",
+    "statement": "In {location}, {value}% of kindergarteners completed the Hepatitis B series.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "iis_child_ipv_rate": {
+    "id": "iis_child_ipv_rate",
+    "short_name": "CA kindergarten polio vaccination rate",
+    "long_name": "California CAIR2: Polio (IPV) vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students up-to-date on polio vaccines, by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools who are up-to-date on inactivated poliovirus (IPV/Polio) vaccination, as assessed by the annual California School Immunization Assessment.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on polio vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "iis_child_var_rate": {
+    "id": "iis_child_var_rate",
+    "short_name": "CA kindergarten varicella vaccination rate",
+    "long_name": "California CAIR2: Varicella vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students up-to-date on varicella vaccines, by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools who are up-to-date on varicella (chickenpox) vaccination, as assessed by the annual California School Immunization Assessment.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on varicella vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "iis_child_utd_rate": {
+    "id": "iis_child_utd_rate",
+    "short_name": "CA kindergarten fully up-to-date rate",
+    "long_name": "California CAIR2: Fully up-to-date vaccination rate among kindergarteners, by county",
+    "category": "immunization",
+    "short_description": "Percentage of California kindergarten students fully up-to-date on all required vaccines, by county and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in California schools who are fully up-to-date on all California-required immunizations, as assessed by the annual California School Immunization Assessment. Required vaccines include DTP, Polio, MMR, HepB, and Varicella.",
+    "statement": "In {location}, {value}% of kindergarteners were fully up-to-date on all required vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ca_cair2_school" }]
+  },
+  "_sources": {
+    "ca_cair2_school": {
+      "name": "California School Immunizations in Kindergarten",
+      "url": "https://data.chhs.ca.gov/dataset/school-immunizations-in-kindergarten-by-academic-year",
+      "organization": "California Department of Public Health (CDPH)",
+      "organization_url": "https://www.cdph.ca.gov/",
+      "location": "CHHS Open Data Portal - School Immunizations in Kindergarten by Academic Year",
+      "location_url": "https://data.chhs.ca.gov/dataset/school-immunizations-in-kindergarten-by-academic-year",
+      "description": "Annual school-level immunization coverage data for California kindergarteners, collected through the California School Immunization Law Assessment. Schools report the vaccination status of enrolled kindergarteners each October. Data cover DTP, Polio, MMR, Hepatitis B, and Varicella vaccines, as well as exemption status (Personal Belief, Medical Exemption). School-level data are aggregated to the county level using enrollment-weighted counts. Schools with fewer than 10 students are suppressed for privacy. Data from CAIR2 (California Immunization Registry 2) and school assessment records. County-level data are available from the 2013-14 school year onward, released by CDPH via the CHHS Open Data Portal in multi-year bundles.",
+      "restrictions": "Public domain. California CDPH data is generally not subject to copyright restrictions.",
+      "date_accessed": 2026
+    }
+  }
+}

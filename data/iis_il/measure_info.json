@@ -1,0 +1,54 @@
+{
+  "iis_flu_rate": {
+    "id": "iis_flu_rate",
+    "short_name": "IL county influenza vaccination rate",
+    "long_name": "Illinois I-CARE: Influenza vaccination rate by county, current season",
+    "category": "immunization",
+    "short_description": "Percentage of Illinois residents vaccinated against influenza in the current season, by county.",
+    "long_description": "Percentage of the Illinois population vaccinated against seasonal influenza, by county, as reported to the Illinois Comprehensive Automated Immunization Registry Exchange (I-CARE). Data are extracted from the IDPH Influenza Vaccination Coverage dashboard (Tableau Server) and reflect cumulative coverage for the current flu season. The dashboard is a snapshot of current-season data; the time column reflects the end of the current flu season (May 31). Suppressed values (where indicated) have been flagged.",
+    "statement": "In {location}, {value}% of residents were vaccinated against influenza in the current season.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "il_icare" }]
+  },
+  "iis_flu_count": {
+    "id": "iis_flu_count",
+    "short_name": "IL county influenza vaccine doses",
+    "long_name": "Illinois I-CARE: Number of influenza vaccines administered by county, current season",
+    "category": "immunization",
+    "short_description": "Number of influenza vaccines administered to Illinois residents in the current season, by county.",
+    "long_description": "Count of influenza vaccines administered to Illinois residents, by county, as reported to the Illinois I-CARE registry. This is an integer count of doses, not unique individuals.",
+    "statement": "In {location}, {value} influenza vaccines were administered in the current season.",
+    "measure_type": "Count",
+    "unit": "Count",
+    "time_resolution": "Year",
+    "sources": [{ "id": "il_icare" }]
+  },
+  "iis_flu_pop": {
+    "id": "iis_flu_pop",
+    "short_name": "IL county flu vaccine denominator population",
+    "long_name": "Illinois I-CARE: Population denominator for flu vaccination coverage, by county",
+    "category": "immunization",
+    "short_description": "Estimated total population used as denominator for flu vaccination coverage calculations, by Illinois county.",
+    "long_description": "County-level population estimates used as the denominator for flu vaccination coverage calculations in the Illinois I-CARE dashboard.",
+    "statement": "In {location}, the estimated population is {value}.",
+    "measure_type": "Count",
+    "unit": "Count",
+    "time_resolution": "Year",
+    "sources": [{ "id": "il_icare" }]
+  },
+  "_sources": {
+    "il_icare": {
+      "name": "Illinois Comprehensive Automated Immunization Registry Exchange (I-CARE)",
+      "url": "https://public.data.illinois.gov/t/Public/views/InfluenzaVaccinationCoverage_Public/Home",
+      "organization": "Illinois Department of Public Health (IDPH)",
+      "organization_url": "https://www.dph.illinois.gov/",
+      "location": "IDPH Influenza Vaccination Coverage Dashboard (Tableau)",
+      "location_url": "https://dph.illinois.gov/topics-services/prevention-wellness/immunization/coverage-dashboards.html",
+      "description": "The Illinois I-CARE (Comprehensive Automated Immunization Registry Exchange) is the statewide immunization information system maintained by the Illinois Department of Public Health. The IDPH Influenza Vaccination Coverage dashboard provides county-level influenza vaccination coverage rates and counts for the current flu season, extracted via the Tableau Server CSV endpoint. Data reflect vaccinations reported to I-CARE by healthcare providers across Illinois. The time column represents the end of the current flu season (May 31).",
+      "restrictions": "Public domain. Illinois DPH data is generally not subject to copyright restrictions.",
+      "date_accessed": 2026
+    }
+  }
+}
