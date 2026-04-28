@@ -1,0 +1,119 @@
+{
+  "iis_infant_series_rate": {
+    "id": "iis_infant_series_rate",
+    "short_name": "IA 2-year-old series completion rate",
+    "long_name": "Iowa IRIS: 4:3:1:3:3:1:4 series completion rate among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children who completed the recommended 4:3:1:3:3:1:4 immunization series, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received all recommended doses: 4 DTaP, 3 Polio, 1 MMR, 3 Hib, 3 Hepatitis B, 1 Varicella, and 4 PCV (4:3:1:3:3:1:4 series). Data come from Iowa's IRIS (Immunization Registry Information System) and are reported via the Iowa Public Health Tracking Portal Tableau dashboard. County-level rates are derived from the Tableau CSV export.",
+    "statement": "In {location}, {value}% of 2-year-olds completed the recommended immunization series.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_dtap_rate": {
+    "id": "iis_infant_dtap_rate",
+    "short_name": "IA 2-year-old DTaP vaccination rate",
+    "long_name": "Iowa IRIS: DTaP vaccination rate (4 doses) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with 4 DTaP doses, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received 4 doses of DTaP vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had 4+ DTaP doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_ipv_rate": {
+    "id": "iis_infant_ipv_rate",
+    "short_name": "IA 2-year-old polio vaccination rate",
+    "long_name": "Iowa IRIS: Polio (IPV) vaccination rate (3 doses) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with 3 polio doses, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received 3 doses of inactivated poliovirus (IPV) vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had 3+ polio doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_mmr_rate": {
+    "id": "iis_infant_mmr_rate",
+    "short_name": "IA 2-year-old MMR vaccination rate",
+    "long_name": "Iowa IRIS: MMR vaccination rate (1 dose) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with at least 1 MMR dose, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received at least 1 dose of MMR (measles, mumps, rubella) vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had at least 1 MMR dose.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_hib_rate": {
+    "id": "iis_infant_hib_rate",
+    "short_name": "IA 2-year-old Hib vaccination rate",
+    "long_name": "Iowa IRIS: Hib vaccination rate (3 doses) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with 3 Hib doses, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received 3 doses of Hib (Haemophilus influenzae type b) vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had 3+ Hib doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_hepb_rate": {
+    "id": "iis_infant_hepb_rate",
+    "short_name": "IA 2-year-old Hepatitis B vaccination rate",
+    "long_name": "Iowa IRIS: Hepatitis B vaccination rate (3 doses) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with 3 Hepatitis B doses, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received 3 doses of Hepatitis B vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had 3+ Hepatitis B doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_var_rate": {
+    "id": "iis_infant_var_rate",
+    "short_name": "IA 2-year-old varicella vaccination rate",
+    "long_name": "Iowa IRIS: Varicella vaccination rate (1 dose) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with at least 1 varicella dose, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received at least 1 dose of varicella (chickenpox) vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had at least 1 varicella dose.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "iis_infant_pcv_rate": {
+    "id": "iis_infant_pcv_rate",
+    "short_name": "IA 2-year-old PCV vaccination rate",
+    "long_name": "Iowa IRIS: PCV vaccination rate (4 doses) among 2-year-olds, by county",
+    "category": "immunization",
+    "short_description": "Percentage of Iowa 2-year-old children with 4 PCV doses, by county.",
+    "long_description": "Percentage of children turning 2 years old in the survey year who received 4 doses of PCV (pneumococcal conjugate) vaccine, as reported in Iowa's IRIS immunization registry.",
+    "statement": "In {location}, {value}% of 2-year-olds had 4+ PCV doses.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "ia_iris" }]
+  },
+  "_sources": {
+    "ia_iris": {
+      "name": "Iowa Immunization Registry Information System (IRIS)",
+      "url": "https://hhs.iowa.gov/about/data-reports/health-disease/immunization/childhood-immunization-data",
+      "organization": "Iowa Department of Health and Human Services (Iowa HHS)",
+      "organization_url": "https://hhs.iowa.gov",
+      "location": "Iowa Public Health Tracking Portal - Childhood Immunization Data Dashboard",
+      "location_url": "https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map",
+      "description": "County-level immunization rates for 2-year-old children derived from Iowa's IRIS (Immunization Registry Information System). The data show the percentage of children who turned 2 years old in the survey year and received all doses of 7 routinely recommended vaccines (DTaP, Polio, MMR, Hib, Hepatitis B, Varicella, PCV) and the combined 4:3:1:3:3:1:4 series. Data are accessed via the Tableau dashboard hosted on the Iowa IDPH server (data.idph.state.ia.us), which requires an SSL bypass (self-signed certificate) and a session cookie from an initial page load. The server returns empty data without a valid session.",
+      "restrictions": "Public domain. Iowa HHS data is generally not subject to copyright restrictions.",
+      "date_accessed": 2026
+    }
+  }
+}

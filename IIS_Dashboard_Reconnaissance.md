@@ -144,25 +144,63 @@ These states use interactive dashboards (Tableau, ArcGIS, R Shiny) that do not o
 
 ---
 
-### Tier 2B: Not Yet Implemented (6 states)
+### Tier 2B: Implemented (3 states)
 
-| State | Abbrev | Platform | Recon Finding | Next Steps |
-|-------|--------|----------|---------------|------------|
-| Iowa | `iis_ia` | Tableau (data.idph.state.ia.us) | CSV exports return HTTP 200 but 0 bytes (session auth required) | Test with httr session cookies from initial page load |
-| Kansas | `iis_ks` | Tableau (kshealthdata.kdhe.ks.gov) | Kindergarten dashboard URL not published; server confirmed at `kshealthdata.kdhe.ks.gov/t/KDHE/` | Try `KindergartenVaccination` workbook; contact kdhe.ImmunizationRegistry@ks.gov |
-| Louisiana | `iis_la` | Tableau (analytics.la.gov) | All CSV export attempts return `{"type":"missing-view"}`; workbook confirmed as `ImmunizationDashboardConsolidated` | Try Tableau REST API bootstrap approach; inspect page source for session token |
-| Oregon | `iis_or` | Tableau Public | CSV export redirects to JS application shell (not CSV); Tableau Public API requires browser | Consider browser automation (RSelenium) or check for Excel download on OHA research page |
-| North Carolina | `iis_nc` | Custom dashboard | Dashboard has "Data Behind the Dashboards" section; no direct CSV URL found; data from NCIR | Check `https://covid19.ncdhhs.gov/dashboard/data-behind-dashboards` for downloadable data |
-| Utah | `iis_ut` | R Shiny | Confirmed R Shiny at `https://avrpublic.dhhs.utah.gov/imms_dashboard/`; no direct API; uses NIS, BRFSS, USIIS data | Browser automation (RSelenium) or data request via Google Form at `immunize@utah.gov` |
+#### Oregon (`iis_or`) — OHA Direct Excel Download
+- **Source**: Oregon Health Authority (OHA) — Annual School Immunization Rate Files
+- **K-12 URL**: `https://www.oregon.gov/oha/PH/.../Documents/SchK-12.xlsx`
+- **Preschool URL**: `https://www.oregon.gov/oha/PH/.../Documents/SchPreschool.xlsx`
+- **Geography**: School-level data by county ("Agency" column), aggregated to county using enrollment-weighted counts
+- **Time**: School year end date (June 30 of stated year); sheet name contains 4-digit year
+- **Vaccines**: DTaP/Tdap, Polio, Varicella, MMR (2 doses K-12 / 1 dose preschool), HepB, HepA, Hib (preschool only), series completion
+- **Notes**: Files overwrite the same URL each year (no year in filename). Two counties (Sherman 41055, Wasco 41065) are missing because their schools are reported under "North Central" ESD rather than individual county names. 34 of 36 counties covered.
+- **Output**: `standard/data_k12.csv.gz` (K-12), `standard/data_preschool.csv.gz` (preschool/child care)
 
-**Notes on Tableau CSV export approach**: The `?:format=csv` pattern works when the Tableau Server has download enabled for that view. Iowa returns empty files (likely session auth required). Louisiana returns "missing-view" JSON (sheet name wrong or CSV export disabled). Illinois and Massachusetts successfully return CSV data. For Iowa, try initiating a session first:
+#### Iowa (`iis_ia`) — Tableau Session Cookie (SSL bypass)
+- **Source**: Iowa HHS / IRIS — Childhood Immunization Data Dashboard
+- **Dashboard URL**: `https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map`
+- **CSV export URL**: `https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map.csv`
+- **Geography**: County-level rates for Iowa 2-year-olds
+- **Time**: Survey year (children turning 2 in that year); typically December 31
+- **Vaccines**: DTaP (4 doses), Polio (3), MMR (1), Hib (3), HepB (3), Varicella (1), PCV (4), combined 4:3:1:3:3:1:4 series
+- **Notes**: Server `data.idph.state.ia.us` uses a self-signed SSL certificate — requires `httr::config(ssl_verifypeer = FALSE)`. CSV export returns 0 bytes without session cookies; initial GET to viz page establishes session. Column names in the CSV are flexible-matched at runtime.
+- **Status**: Implemented; column names need verification on first run (log message shows detected columns)
+- **Output**: `standard/data.csv.gz`
+
+#### Louisiana (`iis_la`) — Tableau Session Bootstrap
+- **Source**: Louisiana Dept of Health (LDH) — School Immunization Dashboard (LINKS)
+- **Workbook**: `SchoolImmunizationDashboard` at `analytics.la.gov/t/LDH/`
+- **Confirmed view name**: `Kindergarten` (from `analytics.la.gov/t/LDH/views/SchoolImmunizationDashboard/Kindergarten?:embed=y`)
+- **Geography**: Parish-level (Louisiana's county equivalents); state FIPS = "22"
+- **Time**: School year end date (June 30)
+- **Vaccines**: DTaP, MMR, Polio, Varicella, HepB, HepA, Hib, series completion
+- **Notes**: CSV export at `/Kindergarten.csv` returns 404 without session. Scraper tries multiple view name candidates (`Kindergarten`, `Parish`, `Home`, `Summary`, etc.) with session cookies from initial page load. Server was returning intermittent errors during recon (April 2026). Previous recon notes incorrectly identified workbook as `ImmunizationDashboardConsolidated`; correct workbook is `SchoolImmunizationDashboard`.
+- **Status**: Implemented but UNTESTED — server was erroring during development; verify on first run
+- **Output**: `standard/data.csv.gz`
+
+---
+
+### Tier 2B: Still Blocked (3 states)
+
+| State | Abbrev | Platform | Recon Finding | Status |
+|-------|--------|----------|---------------|--------|
+| Kansas | `iis_ks` | Tableau (kshealthdata.kdhe.ks.gov) | Server returning HTTP 500 errors on all requests (April 2026). Kindergarten data confirmed to exist (annual survey, 2019-2025) but no working Tableau dashboard URL found. County-level data is in individual PDFs only. | Blocked — try again when server recovers; consider PDF parsing with `pdftools` as fallback |
+| North Carolina | `iis_nc` | JavaScript-rendered dashboard | Kindergarten dashboard at `dph.ncdhhs.gov/programs/epidemiology/immunization/data/kindergarten-dashboard` uses JavaScript-rendered content; no iframe src found. No downloadable CSV/Excel files. School vaccination compliance reports exist but are not publicly downloadable. Dashboard technology unclear (not Tableau, possibly ArcGIS or custom). | Blocked — contact NC DPH (immunization.reports@dhhs.nc.gov) for data access |
+| Utah | `iis_ut` | R Shiny | Confirmed R Shiny at `https://avrpublic.dhhs.utah.gov/imms_dashboard/`; uses NIS, BRFSS, USIIS data; no accessible API endpoints. | Blocked — browser automation (RSelenium) required; or data request to `immunize@utah.gov` |
+
+**Notes on Tableau CSV export approach**: The `?:format=csv` pattern works when the Tableau Server has download enabled for that view. Iowa returns empty files (likely session auth required). Louisiana returns 404 (view name mismatch or session required). Illinois and Massachusetts successfully return CSV data. Session bootstrap approach:
 ```r
-# Iowa session-based approach (untested)
-session <- httr::GET("https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map")
+# Session-based Tableau CSV approach (implemented in Iowa and Louisiana scrapers)
+session <- httr::GET(
+  "https://tableau-server/t/SITE/views/WORKBOOK/VIEW",
+  httr::config(ssl_verifypeer = FALSE)  # needed for Iowa (self-signed cert)
+)
 cookies <- httr::cookies(session)
+session_cookies <- setNames(cookies$value, cookies$name)
 data_resp <- httr::GET(
-  "https://data.idph.state.ia.us/t/IDPH-DataViz/views/Immunization2yearold/Map.csv",
-  httr::set_cookies(.cookies = setNames(cookies$value, cookies$name))
+  "https://tableau-server/t/SITE/views/WORKBOOK/VIEW.csv",
+  httr::set_cookies(.cookies = session_cookies),
+  httr::add_headers("Referer" = session_url)
 )
 ```
 
@@ -270,11 +308,11 @@ The table below shows which vaccines are available from each implemented state. 
 | Massachusetts | `data/iis_ma` | Complete (Tier 2A) | `standard/data.csv.gz` |
 | Illinois | `data/iis_il` | Complete (Tier 2A) | `standard/data.csv.gz` |
 | California | `data/iis_ca` | Complete (Tier 2A) | `standard/data.csv.gz` |
-| Iowa | `data/iis_ia` | Blocked (Tier 2B) — session auth | — |
-| Kansas | `data/iis_ks` | Blocked (Tier 2B) — URL not found | — |
-| Louisiana | `data/iis_la` | Blocked (Tier 2B) — sheet name unknown | — |
-| Oregon | `data/iis_or` | Blocked (Tier 2B) — JS frontend | — |
-| North Carolina | `data/iis_nc` | Blocked (Tier 2B) — no direct download | — |
+| Oregon | `data/iis_or` | Complete (Tier 2B) | `standard/data_k12.csv.gz`, `standard/data_preschool.csv.gz` |
+| Iowa | `data/iis_ia` | Implemented (Tier 2B) — needs test run | `standard/data.csv.gz` (on success) |
+| Louisiana | `data/iis_la` | Implemented (Tier 2B) — server was erroring; needs test | `standard/data.csv.gz` (on success) |
+| Kansas | `data/iis_ks` | Blocked (Tier 2B) — server 500 errors; PDFs only | — |
+| North Carolina | `data/iis_nc` | Blocked (Tier 2B) — JS dashboard, no accessible data | — |
 | Utah | `data/iis_ut` | Blocked (Tier 2B) — R Shiny, no API | — |
 | Arizona | `data/iis_az` | Blocked (Tier 3) | — |
 | Colorado | `data/iis_co` | Blocked (Tier 3) | — |

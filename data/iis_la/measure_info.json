@@ -1,0 +1,119 @@
+{
+  "iis_child_dtap_rate": {
+    "id": "iis_child_dtap_rate",
+    "short_name": "LA kindergarten DTaP vaccination rate",
+    "long_name": "Louisiana LINKS: DTaP vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on DTaP vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented DTaP vaccination, from the Louisiana LINKS Immunization Registry school compliance reports. Parish-level data accessed via the LDH School Immunization Dashboard on analytics.la.gov.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on DTaP vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_mmr_rate": {
+    "id": "iis_child_mmr_rate",
+    "short_name": "LA kindergarten MMR vaccination rate",
+    "long_name": "Louisiana LINKS: MMR vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on MMR vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented MMR (measles, mumps, rubella) vaccination, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on MMR vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_ipv_rate": {
+    "id": "iis_child_ipv_rate",
+    "short_name": "LA kindergarten polio vaccination rate",
+    "long_name": "Louisiana LINKS: Polio vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on polio vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented polio (IPV) vaccination, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on polio vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_var_rate": {
+    "id": "iis_child_var_rate",
+    "short_name": "LA kindergarten varicella vaccination rate",
+    "long_name": "Louisiana LINKS: Varicella vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on varicella vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented varicella vaccination, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on varicella vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_hepb_rate": {
+    "id": "iis_child_hepb_rate",
+    "short_name": "LA kindergarten HepB vaccination rate",
+    "long_name": "Louisiana LINKS: Hepatitis B vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on Hepatitis B vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with a complete Hepatitis B vaccination series, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners completed the Hepatitis B series.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_hepa_rate": {
+    "id": "iis_child_hepa_rate",
+    "short_name": "LA kindergarten HepA vaccination rate",
+    "long_name": "Louisiana LINKS: Hepatitis A vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on Hepatitis A vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented Hepatitis A vaccination, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on Hepatitis A vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_hib_rate": {
+    "id": "iis_child_hib_rate",
+    "short_name": "LA kindergarten Hib vaccination rate",
+    "long_name": "Louisiana LINKS: Hib vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students up-to-date on Hib vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools with documented Hib (Haemophilus influenzae type b) vaccination, from Louisiana LINKS school compliance reports.",
+    "statement": "In {location}, {value}% of kindergarteners were up-to-date on Hib vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "iis_child_series_rate": {
+    "id": "iis_child_series_rate",
+    "short_name": "LA kindergarten fully up-to-date rate",
+    "long_name": "Louisiana LINKS: Fully up-to-date vaccination rate among kindergarteners, by parish",
+    "category": "immunization",
+    "short_description": "Percentage of Louisiana kindergarten students with all required vaccines, by parish and school year.",
+    "long_description": "Percentage of kindergarten students enrolled in Louisiana schools who have documentation for all required vaccines, from Louisiana LINKS school compliance reports. Includes DTaP, Polio, MMR, Hepatitis B, Hepatitis A, Hib, and Varicella.",
+    "statement": "In {location}, {value}% of kindergarteners had all required vaccines.",
+    "measure_type": "Percent",
+    "unit": "Percent",
+    "time_resolution": "Year",
+    "sources": [{ "id": "la_links_school" }]
+  },
+  "_sources": {
+    "la_links_school": {
+      "name": "Louisiana School Immunization Dashboard (LINKS)",
+      "url": "https://analytics.la.gov/t/LDH/views/SchoolImmunizationDashboard/Kindergarten",
+      "organization": "Louisiana Department of Health (LDH)",
+      "organization_url": "https://ldh.la.gov",
+      "location": "LDH Tableau Server - School Immunization Dashboard",
+      "location_url": "https://analytics.la.gov/t/LDH/views/SchoolImmunizationDashboard/Kindergarten",
+      "description": "Parish-level school immunization compliance data for Louisiana kindergarteners, collected annually through Louisiana's school immunization reporting requirements. Data are derived from the LINKS (Louisiana Immunization Network for Kids Statewide) immunization registry. The dashboard at analytics.la.gov provides parish-by-parish vaccination coverage rates for required vaccines. Data are accessed via the Tableau Server CSV export endpoint, which requires establishing a session cookie via an initial page load.",
+      "restrictions": "Public domain. Louisiana Department of Health public data is generally not subject to copyright restrictions.",
+      "date_accessed": 2026
+    }
+  }
+}
